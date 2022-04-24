@@ -256,7 +256,8 @@ bool QtPushBullet::getAccesToken()
     QDesktopServices::openUrl(QUrl::fromUserInput(url));
 
     bool ok = false;
-    QString token = QInputDialog::getText(nullptr, tr("Access Token"), tr("Token:"),
+    QString token = QInputDialog::getText(nullptr, tr("Access Token"),
+                                          tr("Access Token:"),
                                          QLineEdit::Normal, QString(), &ok);
 
     if(ok & !token.isEmpty())

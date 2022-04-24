@@ -48,7 +48,13 @@ private:
     QJsonArray m_devices;
     QWebSocket *m_webSocket;
 
-    //Authorization
+    ///Get the access token
+    /// \brief getAccesToken
+    ///redirect_uri=https://www.pushbullet.com/login-success
+    ///Copy the Access token from redirect url and paste it inside token dialog
+    /// e.g: https://www.pushbullet.com/login-success#access_token=o.0AGv7V5h1yrVo8p5yC3GdkBeOfY
+    /// \return
+    ///
     bool getAccesToken();
     void saveAuthToken(const QJsonDocument &authToken);
     void readAuthToken();
